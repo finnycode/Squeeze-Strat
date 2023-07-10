@@ -4,7 +4,7 @@ import requests
 
 def request_data(ticker):
     data = requests.get(
-        f'''https://api.polygon.io/v2/aggs/ticker/{ticker}/range/1/minute/2023-07-01/2023-07-07?adjusted=true&sort=asc&limit=50000&apiKey=c18qNVBiro5YcLi5dpyiTVapE1v50m9q''')
+        f'''https://api.polygon.io/v2/aggs/ticker/{ticker}/range/1/minute/2023-07-01/2023-07-07?adjusted=true&sort=asc&limit=50000&apiKey={key}''')
     data = data.json()
     data = data['results']
     data = pd.DataFrame(data)
